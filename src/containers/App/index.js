@@ -5,6 +5,7 @@ import ReactGA from 'react-ga'
 import NavBar from 'components/NavBar'
 import GenCode from 'components/GenCode'
 import Hero from 'components/Hero'
+import WhiteLabel from 'components/WhiteLabel'
 
 class App extends Component {
   constructor(props) {
@@ -42,6 +43,7 @@ class App extends Component {
           <Hero />
         </Container>
         <GenCode />
+        <WhiteLabel />
         <Container>
           <Row>
             <Col className="pt-5">

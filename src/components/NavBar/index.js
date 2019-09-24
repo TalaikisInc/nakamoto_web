@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Nav, Collapse, NavItem, NavLink } from 'reactstrap'
+import { Nav, Collapse, NavItem, NavLink, NavbarToggler } from 'reactstrap'
 
 export default class NavBar extends Component {
   constructor(props) {
@@ -22,13 +22,17 @@ export default class NavBar extends Component {
     return (
       <nav className="navbar navbar-toggleable-md navbar-inverse">
         <a href="/" className="navbar-brand" id="white">NAKAMOTO</a>
-        <button onClick={() => this._toggle()} type="button" className="navbar-toggle">
-          <span className="icon-bar"></span>
+        <NavbarToggler onClick={this._toggle} />
+        <button onClick={() => this._toggle()} type="button" className="navbar-toggle" data-toggle="navbar">
+          <span className="caret"></span>
           <span className="icon-bar"></span>
           <span className="icon-bar"></span>
         </button>
         <Collapse isOpen={navOpen} navbar>
           <Nav className="ml-auto" navbar>
+            <NavItem>
+              <NavLink href="#services" id="white">Services</NavLink>
+            </NavItem>
             <NavItem>
               <NavLink href="/" id="white">Google Play</NavLink>
             </NavItem>
