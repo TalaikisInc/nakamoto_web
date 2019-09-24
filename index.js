@@ -5,6 +5,11 @@ const app = express()
 app.use(require('compression')())
 app.use(express.static(join(__dirname, 'build')))
 
+app.get('/.well-known/assetlinks.json', () => {
+  res.set('Content-Type', 'application/json')
+  res.status(200).send(join(__dirname, 'assetlinks.json'))
+})
+
 app.get('/*', (req, res) => {
   res.sendFile(join(__dirname, 'build', 'index.html'))
 })
