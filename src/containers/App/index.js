@@ -6,6 +6,7 @@ import NavBar from 'components/NavBar'
 import GenCode from 'components/GenCode'
 import Hero from 'components/Hero'
 import WhiteLabel from 'components/WhiteLabel'
+import Features from 'components/Features'
 
 class App extends Component {
   constructor(props) {
@@ -43,6 +44,7 @@ class App extends Component {
           <Hero />
         </Container>
         <GenCode />
+        <Features />
         <WhiteLabel />
         <Container>
           <Row>

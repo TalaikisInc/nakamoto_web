@@ -88,7 +88,7 @@ export default class GenCode extends Component {
     }
     const amnt = amntErr ? <Alert color="danger">
         Wrong amount
-      </Alert> : null
+    </Alert> : null
 
     return (
       <div className="pt-5 pb-5 mt-5 mt-lg-0" id="main">
@@ -97,34 +97,34 @@ export default class GenCode extends Component {
           <Col className="col-sm-3 col-12"></Col>
           <Col className="col-sm-3 col-12 p-5">
             <FormGroup>
-              <Label for="typeSelect" id="white">Type</Label>
-              <Input type="select" name="select" id="typeSelect" onChange={this._setType}>
+              <Label for="typeSelect" id="white" className="text-font">Type</Label>
+              <Input type="select" className="text-font" name="select" id="typeSelect" onChange={this._setType}>
                 <option value="0">Ether</option>
                 <option value="1">Tokens</option>
               </Input>
             </FormGroup>
             <FormGroup>
-              <Label for="recipient" id="white">Recipient</Label>
-              <Input name="recipient" id="recipient" placeholder="Recipient account" onChange={this._setRecipient} />
+              <Label for="recipient" id="white" className="text-font">Recipient</Label>
+              <Input name="recipient" id="recipient" className="text-font" placeholder="Recipient account" onChange={this._setRecipient} />
               { recipientError ? <Alert color="danger">
                 Wrong recipient account
               </Alert> : null }
             </FormGroup>
             { type === '1' ?<FormGroup>
-              <Label for="tokenAddress" id="white">Token Address</Label>
-              <Input name="tokenAddress" id="tokenAddress" placeholder="Token address" onChange={this._setTokenAddr} />
+              <Label for="tokenAddress" id="white" className="text-font">Token Address</Label>
+              <Input name="tokenAddress" id="tokenAddress" className="text-font" placeholder="Token address" onChange={this._setTokenAddr} />
               { taErr ? <Alert color="danger">
                 Wrong token address
               </Alert> : null }
             </FormGroup> : null }
             { type === '0' ? <FormGroup>
-              <Label for="amount" id="white">Amount</Label>
-              <Input name="amount" id="amount" placeholder="Amount, Ethers" onChange={this._setAmount} />
+              <Label for="amount" id="white" className="text-font">Amount</Label>
+              <Input name="amount" id="amount" placeholder="Amount, Ethers" onChange={this._setAmount} className="text-font" />
               { amnt }
             </FormGroup>
             : <FormGroup>
-                <Label for="amount" id="white">Amount</Label>
-                <Input name="amount" id="amount" placeholder="Amount, tokens" onChange={this._setAmount} />
+                <Label for="amount" id="white" className="text-font">Amount</Label>
+                <Input name="amount" id="amount" placeholder="Amount, tokens" onChange={this._setAmount} className="text-font" />
                 { amnt }
               </FormGroup>
             }

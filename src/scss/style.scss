@@ -8,6 +8,10 @@ body {
     color: $white;
 }
 
+.text-font {
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
 #main {
     background-color: #000070;
 }
@@ -59,7 +63,74 @@ body {
 
 }
 
+p {
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+li {
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
 h1 {
     font-weight: bold;
     font-size: 3.5em;
+    font-family: 'Imperfecta', Arial, sans-serif;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 1.5em;
+    font-family: 'Imperfecta', Arial, sans-serif;
+}
+
+section.features .cards .card {
+    text-align: center;
+    background: #f2f2f2;
+    padding: 2em;
+    margin: 2em;
+    border-radius: 3px;
+    border: 0;
+}
+
+section.features .cards .card:hover {
+    box-shadow: 20px 20px 0px 0px #000;
+}
+
+section.features .cards .card:first-child img {
+    margin-bottom: 20px;
+}
+
+#brand {
+    color: $white;
+    font-family: 'Imperfecta', Arial, sans-serif;
+}
+
+#icon {
+    color: #000;
+}
+
+section.features .cards .card p {
+    margin-top: 25px;
+    font-size: 1.1rem;
+    color: #6f6f70;
+}
+
+section.features .button-line {
+    text-align: end;
+    margin: 35px 35px 20px 35px;
+    border-radius: 5px;
+}
+
+.box-h3 {
+    padding-top: 1em;  
+}
+
+@font-face {
+	font-family: 'Imperfecta';
+	src: url('../assets/fonts/Imperfecta-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../assets/fonts/Roboto-Light.ttf');
 }

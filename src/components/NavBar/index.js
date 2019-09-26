@@ -21,7 +21,7 @@ export default class NavBar extends Component {
 
     return (
       <nav className="navbar navbar-toggleable-md navbar-inverse">
-        <a href="/" className="navbar-brand" id="white">NAKAMOTO</a>
+        <a href="/" className="navbar-brand" id="brand">NAKAMOTO</a>
         <NavbarToggler onClick={this._toggle} />
         <button onClick={() => this._toggle()} type="button" className="navbar-toggle" data-toggle="navbar">
           <span className="caret"></span>
@@ -31,13 +31,13 @@ export default class NavBar extends Component {
         <Collapse isOpen={navOpen} navbar>
           <Nav className="ml-auto" navbar>
             <NavItem>
-              <NavLink href="#services" id="white">Services</NavLink>
+              <NavLink href="#services" id="white" className="text-font">Services</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/" id="white">Google Play</NavLink>
+              <NavLink href="/" id="white" className="text-font">Google Play</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://www.facebook.com/NakamotoWallet" id="white">Facebook</NavLink>
+              <NavLink href="https://www.facebook.com/NakamotoWallet" id="white" className="text-font">Facebook</NavLink>
             </NavItem>
           </Nav>
         </Collapse>
