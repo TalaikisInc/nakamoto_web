@@ -1,15 +1,16 @@
 import React, { Component } from 'react'
-import { Container, Row, Col } from 'reactstrap'
 import ReactGA from 'react-ga'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
-import NavBar from 'components/NavBar'
-import GenCode from 'components/GenCode'
-import Hero from 'components/Hero'
-import WhiteLabel from 'components/WhiteLabel'
-import Features from 'components/Features'
+import Home from 'containers/Home'
+import AffiliatePrograms from 'containers/AffiliatePrograms'
+import Exchanges from 'containers/Exchanges'
+import Notfound from 'containers/Notfound'
+import CustomRouter from 'containers/CustomRouter'
+import SymbolPage from 'containers/SymbolPage'
 
 class App extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
     this._initGA = this._initGA.bind(this)
     this._logPageView = this._logPageView.bind(this)
@@ -36,24 +37,18 @@ class App extends Component {
     }
   }
 
-  render() {
+  render () {
     return (
-      <div id="conatiner">
-        <NavBar />
-        <Container>
-          <Hero />
-        </Container>
-        <GenCode />
-        <Features />
-        <WhiteLabel />
-        <Container>
-          <Row>
-            <Col className="pt-5">
-              <p className="text-center" id="white">&copy; { new Date().getFullYear() } <a href="https://talaikis.com" id="white">Developer</a></p>
-            </Col>
-          </Row>
-        </Container>
-      </div>
+      <Router>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/Bitcoin-cryptocurrency-affiliate-programs" component={AffiliatePrograms} />
+          <Route exact path="/exchanges" component={Exchanges} />
+          <Route path="/cryptocurrencies/:symbol" component={SymbolPage} />
+          <Route path="/:customPath" component={CustomRouter} />
+          <Route component={Notfound} />
+        </Switch>
+      </Router>
     )
   }
 }

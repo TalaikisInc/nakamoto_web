@@ -8,6 +8,12 @@ body {
     color: $white;
 }
 
+#sym-link {
+    color: $white;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 0.8em;
+}
+
 .text-font {
     font-family: 'Roboto', Arial, sans-serif;
 }
@@ -16,7 +22,7 @@ body {
     background-color: #000070;
 }
 
-#conatiner {
+#container {
     background: url('../assets/5.jpg') no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
