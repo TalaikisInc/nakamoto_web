@@ -10,6 +10,7 @@ import CustomRouter from 'containers/CustomRouter'
 import SymbolPage from 'containers/SymbolPage'
 
 class App extends Component {
+  /*
   constructor (props) {
     super(props)
     this._initGA = this._initGA.bind(this)
@@ -36,6 +37,7 @@ class App extends Component {
       this._logPageView()
     }
   }
+  */
 
   render () {
     return (
