@@ -10,6 +10,7 @@ import Symbols from 'components/Symbols'
 import Footer from 'components/Footer'
 
 class Home extends Component {
+  /*
   componentDidMount () {
     if (process.env.NODE_ENV === 'production') {
       if (!window.GA_INITIALIZED) {
@@ -19,6 +20,7 @@ class Home extends Component {
       this._logPageView()
     }
   }
+  */
 
   render() {
     return (
