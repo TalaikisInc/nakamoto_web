@@ -2,8 +2,8 @@ import React from 'react'
 import { Row, Col } from 'reactstrap'
 
 const WhiteLabel = () => (
-  <div  id="main">
-    <a name="services" />
+  <div id="main">
+    { /* <a name="services" /> */ }
     <div className="pt-5 pb-5 mt-5 mt-lg-0">
       <h1 className="display-4 text-center pt-5" id="white">Services</h1>
       <Row className="m-0">
